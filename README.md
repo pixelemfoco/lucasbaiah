@@ -1,6 +1,6 @@
 # 🎤 Lucas da Bhia
 
-![Lucas da Bhia](https://media.tenor.com/5eDbmLbC9uQAAAAC/dance-brazil.gif)
+![Lucas da Bahia](https://media.tenor.com/5eDbmLbC9uQAAAAC/dance-brazil.gif)
 
 **Do axé ao código, ele entrega tudo!**  
 Lucas da Bhia é irreverência, talento e muita presença digital. Seja nos palcos da vida ou nas linhas do código, ele representa a Bahia com orgulho, ritmo e personalidade.
