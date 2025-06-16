@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lucas da Bahia</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fffccc;
+    color: #333;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Header - glass morphism, sticky, 64px height */
+  header {
+    position: sticky;
+    top: 0;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    background: rgba(204, 204, 204, 0.3);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+  }
+  header .logo {
+    font-weight: 700;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  header .logo .material-icons {
+    font-size: 32px;
+    color: #888;
+  }
+  /* Main layout */
+  main {
+    flex: 1;
+    display: flex;
+    min-height: calc(100vh - 64px);
+    background-color: #fffccc;
+  }
+  /* Sidebar */
+  nav.sidebar {
+    background-color: #ccc;
+    width: 280px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #444;
+    box-shadow: inset -4px 0 6px -4px rgba(0, 0, 0, 0.1);
+  }
+  nav.sidebar a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+  }
+  nav.sidebar a:hover,
+  nav.sidebar a:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+  nav.sidebar a .material-icons {
+    font-size: 24px;
+  }
+  nav.sidebar .notification-badge {
+    background-color: #f44336;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Content area */
+  section.content {
+    flex: 1;
+    padding: 32px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  section.content h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0;
+    color: #555;
+  }
+  /* Footer */
+  footer {
+    background-color: #ccc;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #bbb;
+    flex-shrink: 0;
+  }
+  footer .social-links {
+    display: flex;
+    gap: 16px;
+  }
+  footer .social-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  footer .social-links a:hover,
+  footer .social-links a:focus {
+    color: #2c3e50;
+    outline: none;
+  }
+  /* Responsive */
+  @media (max-width:1024px) {
+    nav.sidebar {
+      width: 220px;
+      padding: 16px;
+    }
+    section.content {
+      padding: 24px 32px;
+    }
+  }
+  @media (max-width:767px) {
+    main {
+      flex-direction: column;
+    }
+    nav.sidebar {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      padding: 8px 16px;
+      box-shadow: inset 0 -4px 6px -4px rgba(0, 0, 0, 0.1);
+    }
+    nav.sidebar a {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      border-radius: 8px;
+    }
+    section.content {
+      padding: 16px 24px;
+    }
+    footer {
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner" aria-label="Lucas da Bahia header">
+  <div class="logo" tabindex="0">
+    <span class="material-icons" aria-hidden="true">landscape</span>
+    Lucas da Bahia
+  </div>
+</header>
+<main>
+  <nav class="sidebar" role="navigation" aria-label="Main navigation">
+    <a href="#" tabindex="0"><span class="material-icons" aria-hidden="true">home</span>Home</a>
+    <a href="#" tabindex="0"><span class="material-icons" aria-hidden="true">person</span>Perfil<span class="notification-badge" aria-label="3 new notifications">3</span></a>
+    <a href="#" tabindex="0"><span class="material-icons" aria-hidden="true">edit</span>Editar</a>
+    <a href="#" tabindex="0"><span class="material-icons" aria-hidden="true">settings</span>Configurações</a>
+  </nav>
+  <section class="content" role="main">
+    <h1>Bem-vindo ao site do Lucas da Bahia</h1>
+    <p>Este é um site moderno com layout responsivo usando as cores selecionadas (#fffccc e #ccc), seguindo os mais altos padrões de design moderno e acessibilidade.</p>
+  </section>
+</main>
+<footer role="contentinfo">
+  <div>© 2024 Lucas da Bahia. Todos os direitos reservados.</div>
+  <div class="social-links" aria-label="Links para redes sociais">
+    <a href="#" aria-label="Facebook" tabindex="0"><span class="material-icons" aria-hidden="true">facebook</span></a>
+    <a href="#" aria-label="Twitter" tabindex="0"><span class="material-icons" aria-hidden="true">twitter</span></a>
+    <a href="#" aria-label="Instagram" tabindex="0"><span class="material-icons" aria-hidden="true">instagram</span></a>
+  </div>
+</footer>
+</body>
+</html>
